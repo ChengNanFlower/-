@@ -24,6 +24,8 @@
 
 2. 打开 Visual studio 终端：在 Windows 桌面下方的搜索栏中搜索终端，若安装的是 VS2019 版本，则搜索 `x64 Native Tools Command Prompt for VS 2019` 或 适用于 `VS 2019 的 x64 本机工具命令提示符`，然后右键以管理员身份打开终端。后续的命令将在该终端执行。
 
+
+
 3. 使用 `pip` 命令安装 Python 依赖：
     - 通过 `python --version` 检查默认 python 版本是否是预期版本，因为你的计算机可能安装有多个 python，可通过修改系统环境变量的顺序来修改默认 Python 版本。
     - 安装 numpy, protobuf, wheel, ninja
