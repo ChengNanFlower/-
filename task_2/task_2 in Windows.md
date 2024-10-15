@@ -20,7 +20,7 @@
     > python：官网[链接](https://www.python.org/downloads/windows/)，可选择 3.8/3.9/3.10/3.11/3.12 中任一版本的 Windows installer(64-bit)安装。安装时注意勾选 `Add Python 3.x to PATH` ，将 Python 添加到环境变量中。
 
     > Visual studio：VS2017 仅用于 CPU 版编译，建议安装 VS2019。官网[链接](https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/)，需要登录后下载，建议下载 Community 社区版。在安装时需要在工作负荷一栏中勾选 使用 `C++的桌面开发` 和 `通用 Windows 平台开发`，并在语言包一栏中选择 `英语`。
-    >>TODO：2019安装包，斜体
+    >>*VS2019安装包已放入当前目录下*
 
 2. 打开 Visual studio 终端：在 Windows 桌面下方的搜索栏中搜索终端，若安装的是 VS2019 版本，则搜索 `x64 Native Tools Command Prompt for VS 2019` 或 适用于 `VS 2019 的 x64 本机工具命令提示符`，然后右键以管理员身份打开终端。后续的命令将在该终端执行。
 
@@ -40,7 +40,7 @@
     ```
     ***注意：`git clone`克隆仓库时常常会出现网络问题，此时应：***
     - 询问大语言模型，如gpt。
-    - 使用镜像源，如`https://ghp.ci/`，其它镜像源自行询问gpt。
+    - 使用镜像源，如 `https://ghp.ci/` ，其它镜像源及使用方式自行询问gpt。
 
 
 5. 创建名为 build 的目录并进入：
@@ -48,10 +48,54 @@
     mkdir build
     cd build
     ```
-
+    #### **~~贴心提示~~：为显示命令执行时间，应手动加入一个[脚本](https://github.com/PaddlePaddle/Paddle/issues/45347#issuecomment-1320810399)来添加时间戳，命名为timecmd.bat，并将它添加到命令中。**
+   
 6. 执行 cmake：
 编译 CPU 版本的 Paddle：
     ```bash
-    cmake .. -GNinja -DWITH_GPU=OFF -DWITH_UNITY_BUILD=ON
+    timecmd.bat cmake .. -GNinja -DWITH_GPU=OFF -DWITH_UNITY_BUILD=ON
     ```
 
+***注意：请在 `cmake`前禁用你之前的编译器，如 `mingw`，否则可能导致编译错误。***
+
+7. 执行编译：
+    ```bash
+    # 将pip3.X改为你的python版本号，如使用python3.10，即改为pip3.10
+
+    pip3.X install -r ../python/requirements.txt
+    timecmd.bat ninja 
+    ```
+    *注：若编译错误，请 `ninja clean`*
+
+8. 编译成功后进入 `python\dist` 目录下找到生成的 `.whl` 包：
+    ```bash
+    cd python\dist
+    ```
+
+9. 安装编译好的 `.whl` 包：
+    ```bash
+    pip install [whl包的名字] --force-reinstall
+    ```
+    恭喜，至此你已完成 PaddlePaddle 的编译安装
+
+**| 验证安装**
+
+- 安装完成后你可以使用 `python` 进入 python 解释器，输入:   
+
+    ```bash
+    python
+    ```
+    ```python
+    import paddle
+    ```
+    ```python
+    paddle.utils.run_check()
+    ```
+    如果出现PaddlePaddle is installed successfully!，说明你已成功安装。
+
+**| 如何卸载**
+- 请使用以下命令卸载 PaddlePaddle：
+    ```bash
+    # CPU 版本的 PaddlePaddle:
+    pip uninstall paddlepaddle
+    ```
