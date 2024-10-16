@@ -49,7 +49,7 @@
     cd build
     ```
 
-    ### ! Warning !：因未知原因， `cmake` 与 `ninja` 很可能出现报错并且无法解决。此时，应删除 `build` 下所有文件，并从 `git clone` 重新开始。:rage:
+    ### ! Warning !：因未知原因， `cmake` 与 `ninja` 很可能出现报错并且无法解决。此时，应删除 `build` 下所有文件，并从 `git clone` 重新开始。😡
 
 6. 创建timecmd.txt，将[脚本](https://github.com/PaddlePaddle/Paddle/issues/45347#issuecomment-1320810399)复制并粘贴到txt文件，并将文件格式改为bat：
     ```bash
@@ -86,7 +86,7 @@
     # 请去掉[]
     pip install [whl包的名字] --force-reinstall
     ```
-    恭喜，至此你已完成 PaddlePaddle 的编译安装!:blush:
+    恭喜，至此你已完成 PaddlePaddle 的编译安装!😊
 
 **| 验证安装**
 
@@ -101,7 +101,7 @@
     ```python
     >>> paddle.utils.run_check()
     ```
-    如果出现PaddlePaddle is installed successfully!，说明你已成功安装。:thumbsup:
+    如果出现PaddlePaddle is installed successfully!，说明你已成功安装。👍
 
 **| 如何卸载**
 - 请使用以下命令卸载 PaddlePaddle：
