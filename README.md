@@ -1,5 +1,6 @@
 # 飞桨快乐开源2024 (https://github.com/PaddlePaddle/Paddle/issues/61482)
 
+- ## 请按照任务2、3、1的顺序来做
 > ## 任务一：给飞桨 API 文档增加图例，完成你的第一个 PR
 - **issue**：https://github.com/PaddlePaddle/docs/issues/6614
 - **文档共享指南**：https://www.paddlepaddle.org.cn/documentation/docs/zh/develop/dev_guides/docs_contributing_guides_cn.html
@@ -12,3 +13,8 @@
 - **【PaddleMIX 热身打卡】跑通 Stable-Diffusion 训练推理**：https://github.com/PaddlePaddle/PaddleMIX/issues/273
 - **Stable-Diffusion 训练推理教程文档**：https://github.com/PaddlePaddle/PaddleMIX/blob/develop/ppdiffusers/examples/stable_diffusion/README.md
 - **AI studio**：https://aistudio.baidu.com/overview
+
+   <img src="https://github.com/user-attachments/assets/751f6713-0ddd-410e-9468-5149d5f8fc4f" alt="MEITU_20241016_201146643" width="500">
+## *“我欲乘风浪迹远方因为我并不平凡普通”*
+
+
