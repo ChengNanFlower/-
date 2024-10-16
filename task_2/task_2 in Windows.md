@@ -20,7 +20,7 @@
     > python：官网[链接](https://www.python.org/downloads/windows/)，可选择 3.8/3.9/3.10/3.11/3.12 中任一版本的 Windows installer(64-bit)安装。安装时注意勾选 `Add Python 3.x to PATH` ，将 Python 添加到环境变量中。
 
     > Visual studio：VS2017 仅用于 CPU 版编译，建议安装 VS2019。官网[链接](https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/)，需要登录后下载，建议下载 Community 社区版。在安装时需要在工作负荷一栏中勾选 使用 `C++的桌面开发` 和 `通用 Windows 平台开发`，并在语言包一栏中选择 `英语`。
-    >>[VS2019安装包](./vs_community__2019.exe   )已放入当前目录下
+    >>[VS2019安装包](https://github.com/ChengNanFlower/PP-warm-up/tree/main/task_2/vs_community__2019.exe   )已放入当前目录下
 
 2. 打开 Visual studio 终端：在 Windows 桌面下方的搜索栏中搜索终端，若安装的是 VS2019 版本，则搜索 `x64 Native Tools Command Prompt for VS 2019` 或 适用于 `VS 2019 的 x64 本机工具命令提示符`，然后右键以管理员身份打开终端。后续的命令将在该终端执行。
 
