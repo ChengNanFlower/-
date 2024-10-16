@@ -49,8 +49,6 @@
     cd build
     ```
 
-    ### ! Warning !：因未知原因， `cmake` 与 `ninja` 很可能出现报错并且无法解决。此时，应删除 `build` 下所有文件，并从 `git clone` 重新开始。😡
-
 6. 创建timecmd.txt，将[脚本](https://github.com/PaddlePaddle/Paddle/issues/45347#issuecomment-1320810399)复制并粘贴到txt文件，并将文件格式改为bat：
     ```bash
     echo. > timecmd.txt
@@ -59,14 +57,16 @@
     ren timecmd.txt timecmd.bat
     ```
 
-7. 执行 cmake：
+   ### **! Warning !** ：因未知原因， `cmake` 与 `ninja` 很可能出现报错并且无法解决。此时，应删除 `build` 下所有文件，并从 `git clone` 重新开始。😡
+   
+8. 执行 cmake：
     编译 CPU 版本的 Paddle：
     ```
     timecmd.bat cmake .. -GNinja -DWITH_GPU=OFF -DWITH_UNITY_BUILD=ON 
     ```
     ***注意：请在 `cmake`前禁用你之前的编译器，如 `mingw`，否则可能导致编译错误。***
 
-8. 执行编译：
+9. 执行编译：
     ```bash
     # 将pip3.X改为你的python版本号，如使用python3.10，即改为pip3.10
 
@@ -75,13 +75,13 @@
     ```
     *若编译错误，请 `ninja clean`*
 
-9. 编译成功后进入 `python\dist` 目录下找到生成的 `.whl` 包：
+10. 编译成功后进入 `python\dist` 目录下找到生成的 `.whl` 包：
     ```bash
     cd python\dist
     dir
     ```
 
-10. 安装编译好的 `.whl` 包：
+11. 安装编译好的 `.whl` 包：
     ```bash
     # 请去掉[]
     pip install [whl包的名字] --force-reinstall
