@@ -1,6 +1,6 @@
 # 飞桨快乐开源2024 (https://github.com/PaddlePaddle/Paddle/issues/61482)
 
- ## 请按照任务2、3、1的顺序来做
+ ## 请按照任务2、1、3的顺序来做
 > ### 任务一：给飞桨 API 文档增加图例，完成你的第一个 PR
  ### **[issue](https://github.com/PaddlePaddle/docs/issues/6614)**
 **[文档共享指南](https://www.paddlepaddle.org.cn/documentation/docs/zh/develop/dev_guides/docs_contributing_guides_cn.html)**
