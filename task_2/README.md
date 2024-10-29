@@ -109,3 +109,6 @@
     # CPU 版本的 PaddlePaddle:
     pip uninstall paddlepaddle
     ```
+
+### 参考资料
+[1] Windows 下从源码编译:[参考链接](https://www.paddlepaddle.org.cn/documentation/docs/zh/develop/install/compile/windows-compile.html)
